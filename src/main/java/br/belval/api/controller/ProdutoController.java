@@ -63,7 +63,7 @@ public class ProdutoController {
 		
 		return ResponseEntity
 				.status(HttpStatus.NOT_FOUND)
-				.body(produtoOpt.get());
+				.body("Produto não encontrado!");
 		
 	}
 	
@@ -92,7 +92,7 @@ public class ProdutoController {
 	            .body("Produto atualizado com sucesso!");
 	}
 	
-	
+	//curl -X DELETE http://localhost:8080/produtos/1
 	@DeleteMapping("/produtos/{id}")
 	public ResponseEntity<String> apagarProduto(@PathVariable Integer id) {
 
